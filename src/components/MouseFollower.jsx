@@ -12,10 +12,12 @@ const MouseFollower = () => {
 
     if (enabled) {
       window.addEventListener("pointermove", handleMove);
+      document.body.classList.toggle("no-cursor", enabled);
     }
 
     return () => {
       window.removeEventListener("pointermove", handleMove);
+      document.body.classList.remove("no-cursor");
     };
   }, [enabled]);
 
@@ -29,7 +31,7 @@ const MouseFollower = () => {
         style={{
           transform: `translate(${position.x}px, ${position.y}px)`,
         }}
-        className="absolute bg-transparent border rounded-full opacity-80 pointer-events-none left-[-20px] top-[-20px] w-[50px] h-[50px]"
+        className="absolute bg-transparent border rounded-full pointer-events-none left-[-20px] top-[-20px] w-[50px] h-[50px]"
       ></div>
       <button
         onClick={ToggleBottom}
