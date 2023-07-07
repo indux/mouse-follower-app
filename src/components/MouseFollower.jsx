@@ -39,19 +39,19 @@ const MouseFollower = () => {
       >
         {enabled ? "DESACTIVAR" : "ACTIVAR"} SEGUIR PUNTERO
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          className="ml-1 w-6 h-6"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
-          aria-hidden="true"
-          className="ml-2 w-6"
+          strokeWidth={1.5}
           viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-          ></path>
+            d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59"
+          />
         </svg>
       </button>
     </>
